@@ -35,7 +35,7 @@ body {
   background: #e0e0e0;
 }
 
-.arrow-icon {
+.arrow-icons {
   border: solid #333;
   border-width: 0 6px 6px 0;
   display: inline-block;
@@ -256,4 +256,14 @@ button:hover {
 #chooseBtn:hover {
   background-color: #2e7031;
   transform: translate(-50%, -50%) scale(1.05);
+}
+
+.arrow-icon {
+  border: solid #333;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 4px;
 }
