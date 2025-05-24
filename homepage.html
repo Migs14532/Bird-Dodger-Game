@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bird Dodger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="center-btn">
+    <button class="start-btn" id="startGameBtn">Start Game</button>
+    <button class="start-btn" id="howToPlayBtn">How to Play</button>
+    <button class="start-btn" id="settingsBtn">Settings</button>
+    <button class="start-btn" id="aboutBtn">About the Game</button>
+  </div>
+  <script>
+    document.getElementById('startGameBtn').onclick = function() {
+      window.location.href = "choose.html";
+    };
+    document.getElementById('howToPlayBtn').onclick = function() {
+      alert(
+        "How to Play:\n\n" +
+        "Use W/A/S/D or the arrow keys to move your bird up, down, left, or right. " +
+        "Avoid all obstacles that appear on the screen. " +
+        "Survive as long as you can to achieve a high score. " +
+        "Collect points by dodging obstacles and try to beat your best score. " +
+        "Stay alert, as the game gets faster the longer you survive. " +
+        "Good luck and have fun!"
+      );
+    };
+    document.getElementById('settingsBtn').onclick = function() {
+      alert(
+        "Settings:\n\n" +
+        "In future updates, you will be able to adjust the game volume, change controls, and customize your bird. " +
+        "You will also be able to toggle sound effects and background music. " +
+        "Stay tuned for more features and improvements!"
+      );
+    };
+    document.getElementById('aboutBtn').onclick = function() {
+      alert(
+        "About the Game:\n\n" +
+        "Bird Dodger is a simple and fun game where you control a bird and try to dodge obstacles for as long as possible. " +
+        "Challenge yourself or your friends to beat the highest score! " +
+        "This game was created as a project to practice web development skills and provide entertainment for all ages. " +
+        "Created with love for everyone to enjoy."
+      );
+    };
+  </script>
+</body>
+</html>
