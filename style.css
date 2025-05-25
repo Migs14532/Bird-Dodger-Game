@@ -194,8 +194,8 @@ button:hover {
 
 .obstacle {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-color: #228B22;
   border-radius: 12px;
   pointer-events: none;
