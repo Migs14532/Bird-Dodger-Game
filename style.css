@@ -193,13 +193,14 @@ button:hover {
 #bird2 { top: 300px; }
 
 .obstacle {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: #228B22;
-  border-radius: 12px;
-  pointer-events: none;
-}
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    pointer-events: none;
+    transform: scaleX(-1); /* Flips image to face left */
+  }
+
+
 
 .moving {
   background-color: #FF4500;

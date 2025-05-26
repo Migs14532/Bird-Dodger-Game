@@ -82,40 +82,57 @@
     }
 
     function spawnObstacle() {
-      if (!gameRunning) return;
-      const numObstacles = 2;
-      for (let i = 0; i < numObstacles; i++) {
-        const obstacle = document.createElement("div");
-        const isMoving = Math.random() < 0.3;
-        obstacle.classList.add("obstacle");
-        if (isMoving) obstacle.classList.add("moving");
-        let obstacleY = Math.random() * (window.innerHeight - 60);
-        let obstacleX = window.innerWidth;
-        let verticalDirection = 1;
-        let verticalSpeed = 2 + Math.random() * 2;
-        obstacle.style.top = obstacleY + "px";
-        obstacle.style.right = "-60px";
-        document.body.appendChild(obstacle);
+  if (!gameRunning) return;
+  const numObstacles = 2;
 
-        const moveInterval = setInterval(() => {
-          if (!gameRunning) {
-            clearInterval(moveInterval);
-            obstacle.remove();
-            return;
-          }
-          obstacleX -= levelSpeed;
-          obstacle.style.right = (window.innerWidth - obstacleX) + "px";
-          if (isMoving) {
-            let currentTop = parseFloat(obstacle.style.top);
-            currentTop += verticalDirection * verticalSpeed;
-            if (currentTop <= 0) verticalDirection = 1;
-            if (currentTop >= window.innerHeight - 60) verticalDirection = -1;
-            obstacle.style.top = currentTop + "px";
-          }
-          checkCollision(obstacle, moveInterval);
-        }, 20);
+  const gifOptions = ["bird.gif", "bird2.gif"]; // List of your GIFs
+
+  for (let i = 0; i < numObstacles; i++) {
+    const obstacle = document.createElement("img");
+    const isMoving = Math.random() < 0.3;
+
+    // 🔀 Randomly choose a GIF
+    const randomGif = gifOptions[Math.floor(Math.random() * gifOptions.length)];
+    obstacle.src = randomGif;
+
+    obstacle.classList.add("obstacle");
+    if (isMoving) obstacle.classList.add("moving");
+
+
+
+    let obstacleY = Math.random() * (window.innerHeight - 60);
+    let obstacleX = window.innerWidth;
+    let verticalDirection = 1;
+    let verticalSpeed = 2 + Math.random() * 2;
+
+    obstacle.style.top = obstacleY + "px";
+    obstacle.style.right = "-60px";
+
+    document.body.appendChild(obstacle);
+
+    const moveInterval = setInterval(() => {
+      if (!gameRunning) {
+        clearInterval(moveInterval);
+        obstacle.remove();
+        return;
       }
-    }
+
+      obstacleX -= levelSpeed;
+      obstacle.style.right = (window.innerWidth - obstacleX) + "px";
+
+      if (isMoving) {
+        let currentTop = parseFloat(obstacle.style.top);
+        currentTop += verticalDirection * verticalSpeed;
+        if (currentTop <= 0) verticalDirection = 1;
+        if (currentTop >= window.innerHeight - 60) verticalDirection = -1;
+        obstacle.style.top = currentTop + "px";
+      }
+
+      checkCollision(obstacle, moveInterval);
+    }, 20);
+  }
+}
+
 
     function checkCollision(obstacle, moveInterval) {
       const birdRect = bird.getBoundingClientRect();
