@@ -182,7 +182,7 @@ button:hover {
 }
 
 .bird {
-  width: 150px;
+  width: 70px;
   position: absolute;
   left: 100px;
   user-select: none;

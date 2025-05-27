@@ -123,21 +123,22 @@
     
    function spawnObstacle() {
   if (!gameRunning) return;
-  const numObstacles = 2;
+  const numObstacles = 3;
 
-  // ✅ Replace with actual image URLs (example below)
   const gifOptions = [
-    "https://i.gifer.com/ZHug.gif",
-    "https://i.gifer.com/tHi.gif"
+    "https://i.gifer.com/ZN2g.gif",
+    "https://i.gifer.com/YqU7.gif",
   ];
 
   for (let i = 0; i < numObstacles; i++) {
     const obstacle = document.createElement("img");
     const isMoving = Math.random() < 0.3;
 
-    // 🔀 Randomly choose a GIF from external links
-    const randomGif = gifOptions[Math.floor(Math.random() * gifOptions.length)];
-    obstacle.src = randomGif;
+    const randomImg = gifOptions[Math.floor(Math.random() * gifOptions.length)];
+    obstacle.src = randomImg;
+
+    obstacle.width = 80;   
+    obstacle.height = 48;  
 
     obstacle.classList.add("obstacle");
     if (isMoving) obstacle.classList.add("moving");

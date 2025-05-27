@@ -83,7 +83,7 @@
 
     function spawnObstacle() {
       if (!gameRunning) return;
-      const numObstacles = 2;
+      const numObstacles = 3;
 
       const gifOptions = [
         "https://i.gifer.com/ZN2g.gif",
@@ -97,8 +97,8 @@
         const randomGif = gifOptions[Math.floor(Math.random() * gifOptions.length)];
         obstacle.src = randomGif;
 
-        obstacle.width = 100;
-        obstacle.height = 50; 
+        obstacle.width = 80;
+        obstacle.height = 48;
 
         obstacle.classList.add("obstacle");
         if (isMoving) obstacle.classList.add("moving");
