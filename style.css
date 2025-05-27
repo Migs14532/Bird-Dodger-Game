@@ -262,3 +262,10 @@ button:hover {
   -webkit-transform: rotate(135deg);
   margin-left: 4px;
 }
+
+p {
+  color:whitesmoke;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px black;
+}
