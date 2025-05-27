@@ -197,14 +197,8 @@ button:hover {
     width: 100px;
     height: 60px;
     pointer-events: none;
-    transform: scaleX(-1); /* Flips image to face left */
+    transform: scaleX(-1);
   }
-
-
-
-.moving {
-  background-color: #FF4500;
-}
 
 #countdown {
   display: none;

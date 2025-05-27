@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings - Bird Dodger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="arrow-btn" id="backBtn" title="Back" style="top: 24px; left: 24px; position: absolute;">
+    <span class="arrow-icon"></span>
+  </button>
+  <div class="container">
+    <h1>Settings</h1>
+    <p>
+        Future updates will let you adjust the game volume, change controls, and customize your bird.<br>
+        You will also be able to toggle sound effects and background music.<br>
+        More features and improvements are coming soon!
+    </p>
+  </div>
+  <script>
+    document.getElementById('backBtn').onclick = function() {
+      window.location.href = "homepage.html";
+    };
+  </script>
+</body>
+</html>

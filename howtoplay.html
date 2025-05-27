@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How to Play - Bird Dodger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button class="arrow-btn" id="backBtn" title="Back" style="top: 24px; left: 24px; position: absolute;">
+    <span class="arrow-icon"></span>
+  </button>
+  <div class="container">
+    <h1>How to Play</h1>
+    <p>
+      Use <b>W/A/S/D</b> or the <b>Arrow Keys</b> to move your bird up, down, left, or right.<br>
+      Avoid all obstacles that appear on the screen.<br>
+      Survive as long as possible to achieve a high score.<br>
+      You earn points by dodging obstacles and can try to beat your best score.<br>
+      The game gets faster the longer you survive.<br>
+      <b>Good luck and have fun!</b>
+    </p>
+  </div>
+  <script>
+     document.getElementById('backBtn').onclick = function() {
+      window.location.href = "homepage.html";
+    };
+  </script>
+</body>
+</html>
